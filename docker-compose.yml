@@ -1,9 +1,13 @@
-version: '3.8'
-
 services:
   cate-404:
     build: .
     container_name: cate-404
     restart: unless-stopped
-    ports:
-      - "8080:5000"
+    # ports:
+      # - "8080:5000"
+    networks:
+      - plv_network
+
+networks:
+  plv_network:
+    external: true
