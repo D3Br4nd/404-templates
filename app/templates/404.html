@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - CaTE 2026</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&display=swap');
+        
+        :root {
+            --oro: #B8860B;
+            --pergamena: #F4F1E8;
+            --bronzo: #8B4513;
+            --nero: #2F1B14;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, var(--pergamena) 0%, #E8DCC6 100%);
+            color: var(--nero);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            background: rgba(255,255,255,0.8);
+            border: 2px solid var(--oro);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            max-width: 100px;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--oro);
+            margin-bottom: 1rem;
+        }
+        
+        .error-code {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            font-weight: 600;
+            color: #8B0000;
+            margin: 1rem 0;
+        }
+        
+        .citazione {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--bronzo);
+            margin: 2rem 0;
+            padding: 1rem;
+            border-left: 4px solid var(--oro);
+            background: rgba(184, 134, 11, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--oro);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #DAA520;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--bronzo);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo-CaTE.png') }}" alt="CaTE 2026" class="logo">
+        <h1>CaTE 2026 - I Cavalieri di Alabastro</h1>
+        
+        <div class="error-code">404</div>
+        
+        <div class="citazione">
+            {{ citazione }}
+        </div>
+        
+        <a href="https://prolocoventicano.com" class="btn">Torna alla Base</a>
+    </div>
+    
+    <footer>
+        <strong>Proloco Venticano</strong> - Caccia al Tesoro Evolution 2026
+    </footer>
+</body>
+</html>
